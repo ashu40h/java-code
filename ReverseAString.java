@@ -1,26 +1,20 @@
 import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        String name="ashu";
+        
+       
+        
+        
+        System.out.println("Try programiz.pro -" + reverseAString(name));
+    }
 
-public class MyClass {
-  
-  
-  public static void main(String[] args){
-     
-     String ascendingOrderString = "ashusharma";
-     
-     String result=reverseAString(ascendingOrderString.toCharArray());
-    
-         System.out.println(result);
-     
+  private static String reverseAString(String string){
+   char[] chars = string.toCharArray();
+        StringBuilder reverse = new StringBuilder();
+        for(int i=string.length()-1; i>=0; i--){
+            reverse.append(chars[i]);
+        }
+    return reverse.toString();
   }
-  
-  public static String reverseAString(char[] chars){
-      String result = "";
-      
-      for(int i=chars.length-1; i>=0; i--){
-        result += chars[i];
-      }
-      
-      return result;
-  }
-  
 }
